@@ -1,0 +1,33 @@
+/* ==================== Стили страницы регистрации ==================== */
+
+body, html {
+  height: 100%;
+}
+
+.main-registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрирование по вертикали */
+  align-items: center;     /* Центрирование по горизонтали */
+  min-height: 100vh;       /* Минимальная высота в размер экрана */
+  padding: 120px 24px 60px; /* Отступы для шапки и подвала */
+}
+
+/* Стили для самой формы */
+.registration-form {
+  width: 100%;
+  max-width: 460px; /* Ширина формы как на макете */
+  margin: auto; /* Дополнительное центрирование */
+}
+
+/* Переопределяем заголовок для более точного соответствия макету */
+.registration-form .form-section__title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 35px;
+}
+
+/* Убираем лишний отступ у последней группы полей */
+.registration-form .form-group:last-of-type {
+  margin-bottom: 30px;
+}

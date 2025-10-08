@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css"/>
+  <link rel="stylesheet" href="./css/booking.css"/>
+  <title>Индекс Драйв - Бронирование</title>
+</head>
+<body>
+<header class="header">
+  <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+  <a href="./index.html" class="logo">
+    <img src="./img/logo.png" alt="Индекс Драйв" class="logo__image">
+    <span class="logo__text"><i>Индекс Драйв</i></span>
+  </a>
+  <nav class="nav">
+    <span>Меню</span>
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#" class="nav__link">Филиалы</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Бронирование</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Личный кабинет</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="main-booking">
+  <div class="booking-container">
+    <section class="form-section car-form">
+      <h2 class="form-section__title">Данные автомобиля</h2>
+      <form>
+        <div class="form-group">
+          <label for="car-id">Идентификатор</label>
+          <input type="text" id="car-id" placeholder="Обязательное поле">
+        </div>
+        <div class="form-group">
+          <label for="car-make">Марка автомобиля</label>
+          <input type="text" id="car-make" placeholder="Обязательное поле">
+        </div>
+        <div class="form-group">
+          <label for="car-name">Название автомобиля</label>
+          <input type="text" id="car-name" placeholder="Обязательное поле">
+        </div>
+        <div class="form-row date-row">
+          <div class="form-group">
+            <label for="date-from">Дата</label>
+            <input type="text" id="date-from" placeholder="с Начало">
+          </div>
+          <div class="form-group">
+            <label for="date-to" style="opacity: 0;">До</label> <input type="text" id="date-to" placeholder="по Конец">
+          </div>
+          <button type="button" class="plus-button" aria-label="Добавить автомобиль">+</button>
+        </div>
+        <div class="form-group">
+          <label for="car-cost">Стоимость, ₽</label>
+          <input type="text" id="car-cost" placeholder="Обязательное поле">
+        </div>
+        <div class="form-group">
+          <label for="car-branch">Филиал</label>
+          <input type="text" id="car-branch" placeholder="Обязательное поле">
+        </div>
+        <button type="submit" class="btn btn-primary">Забронировать</button>
+      </form>
+    </section>
+
+    <div class="section-separator">
+      <span></span><span></span><span></span>
+    </div>
+
+    <section class="client-checkout-section">
+      <div class="form-section client-form">
+        <h2 class="form-section__title">Данные клиента</h2>
+        <form>
+          <div class="form-group">
+            <label for="client-surname">Фамилия</label>
+            <input type="text" id="client-surname" placeholder="Обязательное поле">
+          </div>
+          <div class="form-group">
+            <label for="client-name">Имя</label>
+            <input type="text" id="client-name" placeholder="Обязательное поле">
+          </div>
+          <div class="form-group">
+            <label for="client-patronymic">Отчество</label>
+            <input type="text" id="client-patronymic" placeholder="Обязательное поле">
+          </div>
+          <div class="form-group">
+            <label for="client-phone">Номер телефона</label>
+            <input type="text" id="client-phone" placeholder="Обязательное поле">
+          </div>
+          <div class="form-group">
+            <label>Паспортные данные</label>
+            <div class="form-row">
+              <input type="text" placeholder="Серия">
+              <input type="text" placeholder="Номер">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="client-card">Банковская карта</label>
+            <input type="text" id="client-card" placeholder="Обязательное поле">
+          </div>
+          <div class="form-group">
+            <label for="client-dob">Дата рождения</label>
+            <input type="text" id="client-dob" placeholder="Обязательное поле">
+          </div>
+        </form>
+      </div>
+
+      <div class="checkout-wrapper">
+        <div class="checkout-section">
+          <h3 class="checkout-title">Чек</h3>
+          <ul class="checkout-list">
+            <li class="checkout-item"><span>Opel</span><span>2 820₽</span></li>
+            <li class="checkout-item"><span>Lexus</span><span>6 025₽</span></li>
+          </ul>
+          <div class="checkout-total">
+            <span class="total-label">Сумма</span>
+            <span class="total-price">8 845₽</span>
+          </div>
+          <p class="checkout-discount">5% — Скидка по машине 1</p>
+        </div>
+        <div class="checkout-section payment-section">
+          <h3 class="checkout-title">Оплата</h3>
+          <div class="card-selector">
+            <div class="card-option selected">
+              <img src="/img/card_mc.png" alt="Mastercard">
+              <span>*6824</span>
+            </div>
+            <div class="card-option">
+              <img src="/img/card_mir.png" alt="Mir">
+              <span>*9140</span>
+            </div>
+            <div class="card-option">
+              <img src="/img/card_visa.png" alt="Visa">
+              <span>*2827</span>
+            </div>
+          </div>
+          <div class="payment-actions">
+            <button class="btn btn-primary">Оформить бронь</button>
+            <button class="btn btn-secondary">Изменить тариф</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__section">
+      <div class="footer__logo">Индекс Драйв</div>
+      <div class="footer__phone">8 (800) 555-35-55</div>
+    </div>
+    <div class="footer__section">
+      <h4 class="footer__title">Навигация</h4>
+      <ul class="footer__list">
+        <li><a href="#" class="footer__link">Главная страница</a></li>
+        <li><a href="#" class="footer__link">Страница кабинета</a></li>
+        <li><a href="#" class="footer__link">Вход</a></li>
+        <li><a href="#" class="footer__link">Регистрация</a></li>
+      </ul>
+    </div>
+    <div class="footer__section">
+      <h4 class="footer__title">Бронирование</h4>
+      <ul class="footer__list">
+        <li><a href="./booking.html" class="footer__link">Бронирование</a></li>
+        <li><a href="#" class="footer__link">Филиалы</a></li>
+        <li><a href="#" class="footer__link">Выбор автомобиля</a></li>
+        <li><a href="#" class="footer__link">История бронирований</a></li>
+      </ul>
+    </div>
+    <div class="footer__section">
+      <h4 class="footer__title">Финансы</h4>
+      <ul class="footer__list">
+        <li><a href="#" class="footer__link">Банковские карты</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="js/app.js" defer></script>
+</body>
+</html>

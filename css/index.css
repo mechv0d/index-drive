@@ -1,0 +1,494 @@
+/* ==================== Глобальные стили и сброс ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020103;
+  color: #FFFFFF;
+  font-family: Inter, sans-serif;
+  overflow-x: hidden; /* Предотвращает горизонтальный скролл */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==================== Шапка (Header) ==================== */
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: center; /* Центрируем логотип */
+  align-items: center;
+  width: 100%;
+/ /*height: 150px;*/
+margin: 0 auto;
+  padding: 32px;
+  right: 0;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, .5) 100%);
+  z-index: -1;
+}
+
+.logo {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.logo__text {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 24px; /* Размер адаптирован для соответствия макету */
+  line-height: 1;
+  letter-spacing: -.2px;
+}
+
+.logo__text i {
+  font-style: italic;
+}
+
+/* Кнопка меню */
+.menu-toggle {
+  position: absolute;
+  left: 32px;
+  font-size: 24px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: none; /* Скрываем на больших экранах */
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 4px 9px;
+  border-radius: 8px;
+}
+
+/* Меню */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 16px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+/* Скрываем текст "Меню" */
+.nav > span {
+  display: none;
+}
+
+/* Пункты меню */
+.nav__list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav__link {
+  color: #FFFFFF;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: #FFA322;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    justify-content: left;
+  }
+}
+
+/* Адаптивная версия */
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav.active {
+    transform: translateX(0);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 20px;
+  }
+
+  .nav__link {
+    font-size: 20px;
+  }
+
+  .nav > span {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* ==================== Основной контент (Main) ==================== */
+.main {
+  width: 100%;
+}
+
+/* ==================== Секция "Доверие" (Hero) ==================== */
+.trust-section {
+  background-image: url('/img/big picture.png'); /* Фоновое изображение из макета */
+  background-size: cover;
+  background-position: center;
+  padding: 164px 32px 60px;
+  text-align: center;
+  position: relative;
+}
+
+/* Затемнение для фона для лучшей читаемости текста */
+.trust-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.trust-section__container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trust-section__title {
+  /* Скрыт, т.к. в макете используется логотип в качестве заголовка */
+  display: none;
+}
+
+.trust-section__subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.trust-section__number {
+  font-size: 140px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.trust-section__stats {
+  margin-bottom: 20px;
+}
+
+.trust-section__features {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.trust-section__tagline {
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+/* ==================== Секция "Поиск" ==================== */
+.search-section {
+  background-color: #000000;
+  padding: 80px 32px 60px;
+  position: relative;
+  margin-top: -20px; /* Для наложения волнистой границы */
+}
+
+
+.search-section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-section__title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Для адаптивности */
+}
+
+.search-form__radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.search-form__radio-label {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.search-form__radio {
+  display: none; /* Скрываем стандартный radio button */
+}
+
+.search-form__radio:checked + .search-form__radio-text {
+  color: #FFFFFF;
+}
+
+.search-form__input {
+  background-color: #1E1E1E;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #FFFFFF;
+  font-size: 16px;
+  min-width: 250px;
+}
+
+.search-form__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-form__button {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 12px 32px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-form__button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ==================== Секция "Новости" ==================== */
+.news-section {
+  position: relative;
+  background-color: #000000;
+  padding: 60px 32px;
+  margin-top: -20px;
+}
+
+/* Волнистая граница сверху */
+.search-section::before {
+  content: "";
+  position: absolute;
+  top: 0; /* Половина высоты волны */
+  left: 0;
+  width: 100%;
+  height: 40px;
+  /*radial-gradient(circle at 50% 10%, #FFA322 20px, transparent 21px),*/
+  background-image: radial-gradient(circle at 50% 10%, black 19px, #FFA322 20px, transparent 21px);
+  background-size: 40px 40px;
+  background-repeat: repeat-x;
+  z-index: 1;
+}
+
+.news-section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-section__title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.news-card {
+  background-color: rgba(0, 0, 0, 0.77);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card__image {
+  height: 150px;
+  background-color: #333; /* Заглушка, если нет изображения */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Добавляем изображения из макета */
+.news-grid .news-card:nth-child(1) .news-card__image {
+  background-image: url('/img/crossroads.jpg');
+}
+
+.news-grid .news-card:nth-child(2) .news-card__image {
+  background-image: url('/img/mountains.jpeg');
+}
+
+.news-grid .news-card:nth-child(3) .news-card__image {
+  background-image: url('/img/music road.png');
+}
+
+.news-grid .news-card:nth-child(4) .news-card__image {
+  background-image: url('/img/tanzania.jpg');
+}
+
+.news-card__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Чтобы контент занимал все доступное место */
+}
+
+.news-card__title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.news-card__description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  flex-grow: 1; /* Чтобы описание растягивалось */
+  margin-bottom: 20px;
+}
+
+.news-card__link {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background-color 0.3s, border-color 0.3s;
+  width: fit-content;
+  align-self: flex-start; /* Прижимаем кнопку к левому краю */
+}
+
+.news-card__link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ==================== Подвал (Footer) ==================== */
+.footer {
+  background-color: #08040E;
+  padding: 50px 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer__section:first-child {
+  flex-basis: 30%;
+}
+
+.footer__logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer__phone {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.footer__list {
+  list-style: none;
+}
+
+.footer__list li {
+  margin-bottom: 10px;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: #FFFFFF;
+}

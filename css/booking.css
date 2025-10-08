@@ -1,0 +1,268 @@
+/* ==================== Стили страницы бронирования ==================== */
+
+.main-booking {
+  padding: 120px 32px 60px; /* Отступ сверху для шапки */
+}
+
+.booking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Общие стили для секций с формами */
+.form-section {
+  width: 100%;
+  max-width: 500px; /* Фиксированная ширина для основной формы */
+  background-color: rgba(31, 31, 31, 0.5); /* Фон как в макете */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.form-section__title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.form-group input[type="text"], input[type="password"], input[type="tel"] {
+  width: 100%;
+  background-color: #1E1E1E;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.form-group input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.plus-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стили кнопок */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background-color: #FFA322;
+  color: #000000;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #FFFFFF;
+}
+
+/* Разделитель */
+.section-separator {
+  display: flex;
+  gap: 10px;
+  margin: 40px 0;
+}
+
+.section-separator span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transform: rotate(-45deg);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* Секция с данными клиента и чеком */
+.client-checkout-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Пропорции как в макете */
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.client-form {
+  max-width: none; /* Убираем ограничение ширины */
+}
+
+/* Чек и Оплата */
+.checkout-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.checkout-section {
+  /*border: 1px solid rgba(255, 255, 255, 0.1);*/
+  padding: 30px;
+  border-radius: 12px;
+  /*background-color: rgba(31, 31, 31, 0.5);*/
+}
+
+.checkout-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-align: right;
+}
+
+.checkout-list {
+  list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0 0 15px;
+  margin: 0 0 15px;
+}
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.checkout-item:last-child {
+  margin-bottom: 0;
+}
+
+.checkout-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.total-label {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.total-price {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.checkout-discount {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Оплата */
+.card-selector {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: end;
+}
+
+.card-option {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.card-option.selected {
+  border-color: #FFA322;
+  box-shadow: 0 0 10px rgba(255, 163, 34, 0.5);
+}
+
+.card-option img {
+  width: 48px;
+  margin-bottom: 5px;
+}
+
+.card-option span {
+  font-size: 14px;
+}
+
+.payment-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ==================== Адаптивность ==================== */
+@media (max-width: 992px) {
+  .client-checkout-section {
+    grid-template-columns: 1fr; /* Складываем в одну колонку */
+  }
+}
+
+@media (max-width: 768px) {
+  .main-booking {
+    padding: 100px 16px 40px;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .checkout-section {
+    padding: 20px;
+  }
+
+  .form-row.date-row {
+    flex-wrap: wrap;
+  }
+
+  .date-row .plus-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
