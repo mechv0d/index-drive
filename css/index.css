@@ -440,9 +440,9 @@ margin: 0 auto;
 
 /* ==================== Подвал (Footer) ==================== */
 .footer {
-  background-color: #08040E;
+  /*background-color: #08040E;*/
   padding: 50px 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /*border-top: 1px solid rgba(255, 255, 255, 0.1);*/
 }
 
 .footer__container {

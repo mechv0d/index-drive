@@ -1,0 +1,108 @@
+/* ==================== Стили страницы личного кабинета ==================== */
+
+.main-account {
+  padding: 120px 32px 60px;
+}
+
+.account-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Секция с кнопками */
+.account-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.account-actions .btn {
+  width: 120px; /* Фиксированная ширина кнопок как в макете */
+  padding: 12px;
+}
+
+/* Общий заголовок для секций */
+.section-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+/* Секция с информацией о пользователе */
+.user-info {
+  margin-bottom: 50px;
+}
+
+.user-info__item {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300 !important;
+}
+
+.btn-cards {
+  border: 1px solid #FFA322;
+  color: #FFA322;
+}
+
+/* Секция с бронированиями */
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Адаптивная сетка */
+  gap: 30px;
+}
+
+.booking-card {
+  background-color: rgba(31, 31, 31, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.booking-card__id {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+
+.booking-card__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.booking-card__details {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* ==================== Адаптивность ==================== */
+
+@media (max-width: 992px) {
+  .account-container {
+    grid-template-columns: 1fr; /* Все в одну колонку */
+  }
+
+  .account-actions {
+    flex-direction: row; /* Кнопки в ряд */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-account {
+    padding: 100px 16px 40px;
+  }
+
+  .account-actions {
+    flex-direction: column; /* Кнопки снова в столбец на маленьких экранах */
+    align-items: flex-start;
+  }
+}

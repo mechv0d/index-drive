@@ -1,0 +1,103 @@
+/* ==================== Стили страницы филиалов ==================== */
+
+.main-branches {
+  padding: 120px 32px 60px;
+}
+
+.branches-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.branch-item {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Пропорции колонок как в макете */
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.branch-item:last-child {
+  margin-bottom: 0;
+}
+
+.branch-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.branch-city {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 25px;
+}
+
+/* Стили для кнопки "Посмотреть варианты" */
+.branch-info .btn-secondary {
+  width: 200px;
+  padding: 12px;
+}
+
+/* Стили для списка машин */
+.car-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.car-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.car-select-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #FFA322;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #FFA322;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background-color 0.3s;
+}
+
+.car-select-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.branch-map img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+/* ==================== Адаптивность ==================== */
+
+@media (max-width: 992px) {
+  .branch-item {
+    grid-template-columns: 1fr; /* Складываем в одну колонку */
+    gap: 30px;
+  }
+
+  .branch-map {
+    order: -1; /* Ставим карту выше информации на мобильных */
+  }
+}
+
+@media (max-width: 768px) {
+  .main-branches {
+    padding: 100px 16px 40px;
+  }
+
+  .branch-title {
+    font-size: 24px;
+  }
+}

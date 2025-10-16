@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/index.css"/>
+  <link rel="stylesheet" href="/css/booking.css"/>
+  <link rel="stylesheet" href="/css/account.css"/>
+  <title>Индекс Драйв - Личный кабинет</title>
+</head>
+<body>
+<header class="header">
+  <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+  <a href="/index.html" class="logo">
+    <img src="/img/logo.png" alt="Индекс Драйв" class="logo__image">
+    <span class="logo__text"><i>Индекс Драйв</i></span>
+  </a>
+  <nav class="nav">
+    <span>Меню</span>
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#" class="nav__link">Филиалы</a></li>
+      <li class="nav__item"><a href="./booking.html" class="nav__link">Бронирование</a></li>
+      <li class="nav__item"><a href="./account.html" class="nav__link">Личный кабинет</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="main-account">
+  <div class="account-container">
+    <div class="account-actions">
+      <button class="btn btn-primary btn-exit">Выход</button>
+      <button class="btn btn-secondary btn-cards">Карты</button>
+    </div>
+
+    <div class="account-content">
+      <section class="user-info">
+        <h2 class="section-title">Личный кабинет</h2>
+        <p class="user-info__item">Иванов Иван Иванович</p>
+        <p class="user-info__item">12.05.2003</p>
+        <p class="user-info__item">Паспорт 0119, 609866</p>
+        <p class="user-info__item">+7 933 933 91 68</p>
+      </section>
+
+      <section class="bookings">
+        <h2 class="section-title">Бронирования</h2>
+        <div class="bookings-grid">
+          <article class="booking-card">
+            <span class="booking-card__id">#01</span>
+            <h3 class="booking-card__title">Lexus, Авто 111</h3>
+            <p class="booking-card__details">11.09.2025, Филиал 2</p>
+          </article>
+          <article class="booking-card">
+            <span class="booking-card__id">#02</span>
+            <h3 class="booking-card__title">Opel, Авто 98</h3>
+            <p class="booking-card__details">05.09.2025, Филиал 2</p>
+          </article>
+          <article class="booking-card">
+            <span class="booking-card__id">#03</span>
+            <h3 class="booking-card__title">Honda, Авто 30</h3>
+            <p class="booking-card__details">02.09.2025, Филиал 1</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__section">
+      <div class="footer__logo">Индекс Драйв</div>
+      <div class="footer__phone">8 (800) 555-35-35</div>
+    </div>
+    <div class="footer__section">
+      <h4 class="footer__title">Навигация</h4>
+      <ul class="footer__list">
+        <li><a href="../index.html" class="footer__link">Главная страница</a></li>
+        <li><a href="/pages/account.html" class="footer__link">Страница кабинета</a></li>
+        <li><a href="#" class="footer__link">Вход</a></li>
+        <li><a href="/pages/registration.html" class="footer__link">Регистрация</a></li>
+      </ul>
+    </div>
+    <div class="footer__section">
+      <h4 class="footer__title">Бронирование</h4>
+      <ul class="footer__list">
+        <li><a href="/pages/booking.html" class="footer__link">Забронировать</a></li>
+        <li><a href="#" class="footer__link">Филиалы</a></li>
+        <li><a href="#" class="footer__link">Выбор автомобиля</a></li>
+        <li><a href="#" class="footer__link">История бронирований</a></li>
+      </ul>
+    </div>
+    <div class="footer__section">
+      <h4 class="footer__title">Финансы</h4>
+      <ul class="footer__list">
+        <li><a href="#" class="footer__link">Банковские карты</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/js/app.js" defer></script>
+</body>
+</html>

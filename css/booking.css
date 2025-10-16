@@ -106,6 +106,11 @@
   color: #FFFFFF;
 }
 
+.btn-secondary.yellow {
+  border-color: #FFA322;
+  color: #FFA322;
+}
+
 /* Разделитель */
 .section-separator {
   display: flex;
