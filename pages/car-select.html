@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/index.css"/>
   <link rel="stylesheet" href="../css/booking.css"/>
-  <link rel="stylesheet" href="../css/registration.css"/>
-  <title>Индекс Драйв - Вход</title>
+  <link rel="stylesheet" href="../css/select-car.css"/>
+  <title>Индекс Драйв - Выбор автомобиля</title>
 </head>
 <body>
 <header class="header">
@@ -25,21 +25,47 @@
   </nav>
 </header>
 
-<main class="main-registration">
-  <section class="form-section registration-form">
-    <h2 class="form-section__title">Вход</h2>
-    <form>
-      <div class="form-group">
-        <label for="login-phone">Номер телефона</label>
-        <input type="tel" id="login-phone" placeholder="Обязательное поле">
+<main class="main-selection">
+  <div class="selection-container">
+    <h2 class="main-title">Выбор автомобиля</h2>
+
+    <div class="car-grid">
+      <div class="car-card">
+        <div class="car-card__header">
+          <h3 class="car-card__model">Заказ 1</h3>
+          <span class="car-card__price">2350Р</span>
+        </div>
+        <ul class="car-card__specs">
+          <li><h3 class="car-card__model full-line">Audi Q7</h3></li>
+          <li>Цвет: жёлтый</li>
+          <li>Бензиновый двигатель, АКП</li>
+        </ul>
+        <img src="/img/cars/01.png" alt="Audi Q7" class="car-card__image">
+        <div class="car-card__actions">
+          <button class="btn btn-secondary">Выбрать</button>
+          <button class="btn btn-secondary">Отмена</button>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="reg-password">Пароль</label>
-        <input type="password" id="reg-password" placeholder="Обязательное поле">
+
+      <div class="car-card">
+        <div class="car-card__header">
+          <h3 class="car-card__model">Заказ 1</h3>
+          <span class="car-card__price">2350Р</span>
+        </div>
+        <ul class="car-card__specs">
+          <li><h3 class="car-card__model full-line">Audi Q7</h3></li>
+          <li>Цвет: жёлтый</li>
+          <li>Бензиновый двигатель, АКП</li>
+        </ul>
+        <img src="/img/cars/01.png" alt="Audi Q7" class="car-card__image">
+        <div class="car-card__actions">
+          <button class="btn btn-secondary">Выбрать</button>
+          <button class="btn btn-secondary">Отмена</button>
+        </div>
       </div>
-      <button type="submit" class="btn btn-primary">Войти</button>
-    </form>
-  </section>
+
+    </div>
+  </div>
 </main>
 
 <footer class="footer">

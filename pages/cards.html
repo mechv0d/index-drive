@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/index.css"/>
+  <link rel="stylesheet" href="/css/booking.css"/>
+  <link rel="stylesheet" href="/css/cards.css"/>
+  <title>Индекс Драйв - Банковские карты</title>
+</head>
+<body>
+<header class="header">
+  <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+  <a href="../index.html" class="logo">
+    <img src="../img/logo.png" alt="Индекс Драйв" class="logo__image">
+    <span class="logo__text"><i>Индекс Драйв</i></span>
+  </a>
+  <nav class="nav">
+    <span>Меню</span>
+    <ul class="nav__list">
+      <li class="nav__item"><a href="/pages/branches.html" class="nav__link">Филиалы</a></li>
+      <li class="nav__item"><a href="/pages/booking.html" class="nav__link">Бронирование</a></li>
+      <li class="nav__item"><a href="/pages/profile.html" class="nav__link">Личный кабинет</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="main-cards">
+  <div class="cards-container">
+    <div class="cards-header">
+      <h2 class="section-title">Банковские карты пользователя Сергей</h2>
+      <button class="btn btn-secondary btn-add-card">Добавить</button>
+    </div>
+
+    <div class="card-grid">
+      <article class="card-item">
+        <div class="card-item__header">
+          <span class="card-item__number">*2847</span>
+          <img src="../img/card_mir.png" alt="Visa" class="card-item__logo">
+        </div>
+        <p class="card-item__status">Активна</p>
+        <button class="btn btn-secondary btn-delete-card">Удалить</button>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<!-- Модальное окно добавления карты -->
+<div class="modal-overlay" id="addCardModal">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Закрыть окно">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <h3 class="modal-title">Создать карту</h3>
+
+    <form class="card-form">
+      <div class="form-group">
+        <label for="cardNumber" class="form-label">Номер карты</label>
+        <input
+          type="text"
+          id="cardNumber"
+          class="form-input"
+          placeholder="____ ____ ____ ____"
+          maxlength="19"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="cardHolder" class="form-label">Имя и фамилия держателя (латиницей)</label>
+        <input
+          type="text"
+          id="cardHolder"
+          class="form-input"
+          placeholder="Обязательное поле"
+          required
+        >
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expiryDate" class="form-label">Дата окончания</label>
+          <input
+            type="text"
+            id="expiryDate"
+            class="form-input"
+            placeholder="Обязательное поле"
+            maxlength="5"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="cvv" class="form-label" style="text-align: end">CVV/CVC</label>
+          <input
+            type="text"
+            id="cvv"
+            class="form-input"
+            placeholder="3 символа"
+            maxlength="3"
+            required
+          >
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-submit-card">Добавить карту</button>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__section">
+      <div class="footer__logo">Индекс Драйв</div>
+      <div class="footer__phone">8 (800) 555-35-35</div>
+    </div>
+    <div class="footer__section">
+      <h4 class="footer__title">Навигация</h4>
+      <ul class="footer__list">
+        <li><a href="/index.html" class="footer__link">Главная страница</a></li>
+        <li><a href="/pages/profile.html" class="footer__link">Страница кабинета</a></li>
+        <li><a href="/pages/login.html" class="footer__link">Вход</a></li>
+        <li><a href="/pages/register.html" class="footer__link">Регистрация</a></li>
+      </ul>
+    </div>
+    <div class="footer__section">
+      <h4 class="footer__title">Бронирование</h4>
+      <ul class="footer__list">
+        <li><a href="/pages/booking.html" class="footer__link">Забронировать</a></li>
+        <li><a href="/pages/branches.html" class="footer__link">Филиалы</a></li>
+        <li><a href="/pages/car-select.html" class="footer__link">Выбор автомобиля</a></li>
+        <li><a href="/pages/history.html" class="footer__link">История бронирований</a></li>
+      </ul>
+    </div>
+    <div class="footer__section">
+      <h4 class="footer__title">Финансы</h4>
+      <ul class="footer__list">
+        <li><a href="/pages/cards.html" class="footer__link">Банковские карты</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="../js/app.js" defer></script>
+<script src="../js/cards.js" defer></script>
+</body>
+</html>

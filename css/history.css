@@ -1,0 +1,141 @@
+/* ==================== Стили страницы истории бронирований ==================== */
+
+.main-history {
+  padding: 120px 32px 60px;
+  min-height: 100vh;
+}
+
+.history-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #FFFFFF;
+}
+
+.booking-group {
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px #444444 solid;
+  border-radius: 8px;
+  padding: 24px;
+}
+/* Добавляем разделительную линию, как в макете */
+.booking-group + .booking-group {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 40px;
+}
+
+.booking-group__header {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.booking-group__id {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.booking-group__cost {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Сетка для карточек заказов */
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
+  gap: 30px;
+}
+
+/* Стили для карточки заказа */
+.order-card {
+  background-color: #1F1F1F;
+  max-width: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.order-card__title {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.order-card__price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.order-card__model {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.order-card__repeat-btn {
+  margin: 22px auto 0;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.order-card__details,
+.order-card__meta {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+.order-card__meta {
+  margin-bottom: 20px;
+}
+
+.order-card__image {
+  width: 100%;
+  height: 150px; /* Фиксированная высота для единообразия */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.order-card .btn-secondary {
+  width: 150px;
+  padding: 12px;
+  align-self: flex-start; /* Кнопка слева */
+}
+
+/* ==================== Адаптивность ==================== */
+
+@media (max-width: 768px) {
+  .main-history {
+    padding: 100px 16px 40px;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .booking-group__id {
+    font-size: 20px;
+  }
+
+  .booking-group__cost {
+    font-size: 16px;
+  }
+}

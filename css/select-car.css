@@ -1,0 +1,109 @@
+/* ==================== Стили страницы выбора автомобиля ==================== */
+
+.main-selection {
+  padding: 120px 32px 60px;
+  min-height: 100vh;
+}
+
+.selection-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Общий заголовок со страницы истории */
+.main-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #FFFFFF;
+}
+
+/* Сетка для карточек автомобилей */
+.car-grid {
+  display: flex;
+  flex-direction: row;
+  /*grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));*/
+  gap: 30px;
+  justify-content: start; /* Центрируем карточки, если их мало */
+  margin-top: 100px;
+}
+
+/* Стили для карточки автомобиля */
+.car-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px; /* Ограничиваем ширину, как в макете */
+  /*margin: 0 auto; !* Центрируем карточки в сетке *!*/
+}
+
+.car-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.car-card__model {
+  font-size: 24px;
+  font-weight: 600;
+}
+.car-card__model.full-line {
+  width: 100%;
+}
+
+.car-card__price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.car-card__specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.car-card__image {
+  width: 100%;
+  height: 180px; /* Фиксированная высота для единообразия */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.car-card__actions {
+  display: flex;
+  gap: 15px;
+}
+
+.car-card__actions .btn-secondary {
+  flex: 1; /* Кнопки занимают равную ширину */
+  padding: 12px;
+}
+
+/* ==================== Адаптивность ==================== */
+
+@media (max-width: 768px) {
+  .main-selection {
+    padding: 100px 16px 40px;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .car-grid {
+    grid-template-columns: 1fr; /* Одна колонка на мобильных */
+  }
+
+  .car-card {
+    max-width: 100%; /* Карточка на всю ширину */
+  }
+}
