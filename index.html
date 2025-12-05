@@ -3,198 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/index.css"/>
-  <title>Индекс Драйв - Главная страница</title>
+  <title>Индекс Драйв - Главная</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- Шапка сайта -->
-<header class="header">
-  <!-- Кнопка меню (бургер) -->
-  <button class="menu-toggle" aria-label="Открыть меню">
-    ☰
-  </button>
 
-  <!-- Логотип компании -->
-    <a href="./index.html" class="logo">
-      <img src="./img/logo.png" alt="Индекс Драйв" class="logo__image">
-      <span class="logo__text"><i>Индекс Драйв</i></span>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="img/logo.png" alt="Logo" width="40" height="40">
+      <i>Индекс Драйв</i>
     </a>
-
-  <!-- Меню навигации -->
-  <nav class="nav">
-    <span>Меню</span>
-    <ul class="nav__list">
-      <li class="nav__item">
-        <a href="/pages/branches.html" class="nav__link">Филиалы</a>
-      </li>
-      <li class="nav__item">
-        <a href="/pages/booking.html" class="nav__link">Бронирование</a>
-      </li>
-      <li class="nav__item">
-        <a href="/pages/profile.html" class="nav__link">Личный кабинет</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<main class="main">
-  <!-- Секция о доверии компании -->
-  <section class="trust-section">
-    <div class="trust-section__container">
-      <h1 class="trust-section__title">Индекс Драйв</h1>
-      <p class="trust-section__subtitle">Предоставляем услуги уже на протяжении</p>
-
-      <div class="trust-section__stats">
-        <div class="trust-section__stat">
-          <span class="trust-section__number">10 лет</span>
-        </div>
-      </div>
-
-      <ul class="trust-section__features">
-        <li class="trust-section__feature">Множество филиалов по всей стране</li>
-        <li class="trust-section__feature">Разнообразный автопарк из более<br>чем 200 автомобилей</li>
+    <button class="navbar-toggler btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="pages/branches.html">Филиалы</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/booking.html">Бронирование</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/profile.html">Личный кабинет</a></li>
       </ul>
-
-      <p class="trust-section__tagline">На любой случай, любой автомобиль.</p>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <!-- Форма поиска -->
-  <section class="search-section">
-    <div class="search-section__container">
-      <h2 class="search-section__title">Поиск автомобиля</h2>
+<main style="padding-top: 0;"> <section class="trust-section text-center text-white">
+  <div class="trust-overlay"></div>
+  <div class="container trust-content">
+    <p class="fs-5 mb-0 text-white-50">Предоставляем услуги уже на протяжении</p>
+    <div class="trust-number text-orange">10 лет</div>
+    <ul class="list-unstyled fs-5 text-white-50 my-4">
+      <li>Множество филиалов по всей стране</li>
+      <li>Автопарк более 200 автомобилей</li>
+    </ul>
+    <h2 class="h3 fw-normal">На любой случай, любой автомобиль.</h2>
+  </div>
+</section>
 
-      <form class="search-form">
-        <div class="search-form__group">
-          <!--          <label class="search-form__label">Класс автомобиля</label>-->
-          <div class="search-form__radio-group">
-            <label class="search-form__radio-label">
-              <input type="radio" name="car-class" value="economy" class="search-form__radio">
-              <span class="search-form__radio-text">Эконом</span>
-            </label>
-            <label class="search-form__radio-label">
-              <input type="radio" name="car-class" value="premium" class="search-form__radio">
-              <span class="search-form__radio-text">Премиум</span>
-            </label>
+  <section class="py-5 bg-black">
+    <div class="container">
+      <h2 class="text-center mb-4">Поиск автомобиля</h2>
+      <form class="row g-3 justify-content-center">
+        <div class="col-auto d-flex align-items-center gap-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="carClass" id="classEconomy" checked>
+            <label class="form-check-label" for="classEconomy">Эконом</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="carClass" id="classPremium">
+            <label class="form-check-label" for="classPremium">Премиум</label>
           </div>
         </div>
-
-        <div class="search-form__group">
-          <input type="text" placeholder="Марка..." class="search-form__input">
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Марка...">
         </div>
-
-        <div class="search-form__group">
-          <input type="text" placeholder="Модель..." class="search-form__input">
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Модель...">
         </div>
-
-        <button type="submit" class="search-form__button">Найти</button>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-secondary px-4">Найти</button>
+        </div>
       </form>
     </div>
   </section>
 
-  <!-- Новости -->
-  <section class="news-section">
-    <div class="news-section__container">
-      <h2 class="news-section__title">Новости</h2>
-
-      <div class="news-grid">
-        <!-- Новость 1 -->
-        <article class="news-card">
-          <div class="news-card__image">
-            <!-- Изображение будет добавлено через CSS или JS -->
+  <section class="py-5 bg-black">
+    <div class="container">
+      <h2 class="text-center mb-5">Новости</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="custom-card d-flex flex-column h-100">
+            <div class="news-card-img" style="background-image: url('img/crossroads.jpg');"></div>
+            <h5 class="mb-3">Суд за продажу аккаунтов</h5>
+            <p class="small text-white-50 flex-grow-1">В России вынесли первый приговор за продажу аккаунтов каршеринга.</p>
+            <a href="#" class="btn btn-sm btn-secondary align-self-start mt-2">Перейти</a>
           </div>
-          <div class="news-card__content">
-            <h3 class="news-card__title">В России вынесли первый приговор за продажу аккаунтов каршеринга</h3>
-            <p class="news-card__description">В конце 2020 года в России вынесли первый приговор за продажу аккаунтов
-              каршеринга. Приморский районный суд Петербурга оштрафовал гражданина РФ Романа Амелина на 50 тыс.
-              рублей.</p>
-            <a href="#" class="news-card__link">Перейти</a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="custom-card d-flex flex-column h-100">
+            <div class="news-card-img" style="background-image: url('img/mountains.jpeg');"></div>
+            <h5 class="mb-3">Программа поддержки</h5>
+            <p class="small text-white-50 flex-grow-1">Программа не заработала из-за проблем с оборудованием.</p>
+            <a href="#" class="btn btn-sm btn-secondary align-self-start mt-2">Перейти</a>
           </div>
-        </article>
-
-        <!-- Новость 2 -->
-        <article class="news-card">
-          <div class="news-card__image">
-            <!-- Изображение будет добавлено через CSS или JS -->
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="custom-card d-flex flex-column h-100">
+            <div class="news-card-img" style="background-image: url('img/music road.png');"></div>
+            <h5 class="mb-3">Мошенничество</h5>
+            <p class="small text-white-50 flex-grow-1">Каршеринг становится инструментом для мошенников.</p>
+            <a href="#" class="btn btn-sm btn-secondary align-self-start mt-2">Перейти</a>
           </div>
-          <div class="news-card__content">
-            <h3 class="news-card__title">Программа поддержки каршеринга не заработала из-за российского телематического
-              оборудования</h3>
-            <p class="news-card__description">25 августа 2020 года стало известно о том, что программа поддержки
-              каршеринга, которая была анонсирована ещё в апреле на совещании у президента РФ Владимира Путина, так и не
-              заработала.</p>
-            <a href="#" class="news-card__link">Перейти</a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="custom-card d-flex flex-column h-100">
+            <div class="news-card-img" style="background-image: url('img/tanzania.jpg');"></div>
+            <h5 class="mb-3">Конфликт с Роспотребнадзором</h5>
+            <p class="small text-white-50 flex-grow-1">Сервисы обвинили ведомство в блокировке деятельности.</p>
+            <a href="#" class="btn btn-sm btn-secondary align-self-start mt-2">Перейти</a>
           </div>
-        </article>
-
-        <!-- Новость 3 -->
-        <article class="news-card">
-          <div class="news-card__image">
-            <!-- Изображение будет добавлено через CSS или JS -->
-          </div>
-          <div class="news-card__content">
-            <h3 class="news-card__title">Мошенничество с данными клиентов</h3>
-            <p class="news-card__description">По сообщениям на июль 2020 г каршеринг становится отличным помощником для
-              мошенников. С помощью селфи клиентов с паспортом на людей берут кредиты в микрофинансовых компаниях.</p>
-            <a href="#" class="news-card__link">Перейти</a>
-          </div>
-        </article>
-
-        <!-- Новость 4 -->
-        <article class="news-card">
-          <div class="news-card__image">
-            <!-- Изображение будет добавлено через CSS или JS -->
-          </div>
-          <div class="news-card__content">
-            <h3 class="news-card__title">Столичный каршеринг обвинил Роспотребнадзор в блокировке деятельности.
-              Новые правила операторам объяснять не спешат</h3>
-            <p class="news-card__description">Каршеринг не может возобновить работу по докоронавирусному сценарию из-за
-              отсутствия предписаний Роспотребнадзора. Представители сервисов обвинили ведомство в блокировке их
-              деятельности и 9 июня направили коллективное обращение.</p>
-            <a href="#" class="news-card__link">Перейти</a>
-          </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
+
 </main>
 
-<!-- Подвал сайта -->
 <footer class="footer">
-  <div class="footer__container">
-    <div class="footer__section">
-      <div class="footer__logo">Индекс Драйв</div>
-      <div class="footer__phone">8 (800) 555-35-55</div>
-    </div>
-
-    <div class="footer__section">
-      <h4 class="footer__title">Навигация</h4>
-      <ul class="footer__list">
-        <li><a href="/index.html" class="footer__link">Главная страница</a></li>
-        <li><a href="/pages/profile.html" class="footer__link">Страница кабинета</a></li>
-        <li><a href="/pages/login.html" class="footer__link">Вход</a></li>
-        <li><a href="/pages/register.html" class="footer__link">Регистрация</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__section">
-      <h4 class="footer__title">Бронирование</h4>
-      <ul class="footer__list">
-        <li><a href="/pages/booking.html" class="footer__link">Бронирование</a></li>
-        <li><a href="/pages/branches.html" class="footer__link">Филиалы</a></li>
-        <li><a href="/pages/car-select.html" class="footer__link">Выбор автомобиля</a></li>
-        <li><a href="/pages/history.html" class="footer__link">История бронирований</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__section">
-      <h4 class="footer__title">Финансы</h4>
-      <ul class="footer__list">
-        <li><a href="/pages/cards.html" class="footer__link">Банковские карты</a></li>
-      </ul>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6">
+        <h4 class="mb-3 fw-bold">Индекс Драйв</h4>
+        <p class="text-white-50">8 (800) 555-35-35</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-title">Навигация</h5>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./pages/profile.html">Кабинет</a></li>
+          <li><a href="./pages/login.html">Вход</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-title">Бронирование</h5>
+        <ul>
+          <li><a href="./pages/booking.html">Забронировать</a></li>
+          <li><a href="./pages/branches.html">Филиалы</a></li>
+          <li><a href="./pages/history.html">История</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h5 class="footer-title">Финансы</h5>
+        <ul>
+          <li><a href="./pages/cards.html">Карты</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>
-<script src="js/app.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

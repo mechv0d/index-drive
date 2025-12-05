@@ -3,103 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/index.css"/>
-  <link rel="stylesheet" href="../css/booking.css"/>
-  <link rel="stylesheet" href="../css/select-car.css"/>
-  <title>Индекс Драйв - Выбор автомобиля</title>
+  <title>Индекс Драйв - Выбор авто</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<header class="header">
-  <button class="menu-toggle" aria-label="Открыть меню">☰</button>
-  <a href="../index.html" class="logo">
-    <img src="../img/logo.png" alt="Индекс Драйв" class="logo__image">
-    <span class="logo__text"><i>Индекс Драйв</i></span>
-  </a>
-  <nav class="nav">
-    <span>Меню</span>
-    <ul class="nav__list">
-      <li class="nav__item"><a href="/pages/branches.html" class="nav__link">Филиалы</a></li>
-      <li class="nav__item"><a href="/pages/booking.html" class="nav__link">Бронирование</a></li>
-      <li class="nav__item"><a href="/pages/profile.html" class="nav__link">Личный кабинет</a></li>
-    </ul>
-  </nav>
-</header>
 
-<main class="main-selection">
-  <div class="selection-container">
-    <h2 class="main-title">Выбор автомобиля</h2>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+      <img src="../img/logo.png" alt="Logo" width="40" height="40">
+      <i>Индекс Драйв</i>
+    </a>
+    <button class="navbar-toggler btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="branches.html">Филиалы</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Бронирование</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Личный кабинет</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <div class="car-grid">
-      <div class="car-card">
-        <div class="car-card__header">
-          <h3 class="car-card__model">Заказ 1</h3>
-          <span class="car-card__price">2350Р</span>
-        </div>
-        <ul class="car-card__specs">
-          <li><h3 class="car-card__model full-line">Audi Q7</h3></li>
-          <li>Цвет: жёлтый</li>
-          <li>Бензиновый двигатель, АКП</li>
-        </ul>
-        <img src="/img/cars/01.png" alt="Audi Q7" class="car-card__image">
-        <div class="car-card__actions">
-          <button class="btn btn-secondary">Выбрать</button>
-          <button class="btn btn-secondary">Отмена</button>
-        </div>
-      </div>
+<main>
+  <div class="container py-5">
+    <h2 class="text-center mb-5">Выбор автомобиля</h2>
 
-      <div class="car-card">
-        <div class="car-card__header">
-          <h3 class="car-card__model">Заказ 1</h3>
-          <span class="car-card__price">2350Р</span>
-        </div>
-        <ul class="car-card__specs">
-          <li><h3 class="car-card__model full-line">Audi Q7</h3></li>
-          <li>Цвет: жёлтый</li>
-          <li>Бензиновый двигатель, АКП</li>
-        </ul>
-        <img src="/img/cars/01.png" alt="Audi Q7" class="car-card__image">
-        <div class="car-card__actions">
-          <button class="btn btn-secondary">Выбрать</button>
-          <button class="btn btn-secondary">Отмена</button>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="custom-card h-100 d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-baseline mb-2">
+            <h4 class="mb-0">Заказ 1</h4>
+            <span class="fs-5 fw-bold">2350₽</span>
+          </div>
+
+          <ul class="list-unstyled text-white-50 mb-3 small">
+            <li class="fs-5 text-white fw-bold mb-1">Audi Q7</li>
+            <li>Цвет: жёлтый</li>
+            <li>Бензиновый двигатель, АКП</li>
+          </ul>
+
+          <img src="../img/cars/01.png" alt="Audi" class="img-fluid rounded mb-3 flex-grow-1 object-fit-cover" style="height: 180px;">
+
+          <div class="d-flex gap-2">
+            <button class="btn btn-secondary flex-grow-1">Выбрать</button>
+            <button class="btn btn-secondary flex-grow-1">Отмена</button>
+          </div>
         </div>
       </div>
 
+      <div class="col-md-6 col-lg-4">
+        <div class="custom-card h-100 d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-baseline mb-2">
+            <h4 class="mb-0">Заказ 2</h4>
+            <span class="fs-5 fw-bold">4100₽</span>
+          </div>
+
+          <ul class="list-unstyled text-white-50 mb-3 small">
+            <li class="fs-5 text-white fw-bold mb-1">Toyota Land Cruiser</li>
+            <li>Цвет: черный</li>
+            <li>Дизельный двигатель, АКП</li>
+          </ul>
+
+          <img src="../img/cars/01.png" alt="Toyota" class="img-fluid rounded mb-3 flex-grow-1 object-fit-cover" style="height: 180px;">
+
+          <div class="d-flex gap-2">
+            <button class="btn btn-secondary flex-grow-1">Выбрать</button>
+            <button class="btn btn-secondary flex-grow-1">Отмена</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </main>
 
 <footer class="footer">
-  <div class="footer__container">
-    <div class="footer__section">
-      <div class="footer__logo">Индекс Драйв</div>
-      <div class="footer__phone">8 (800) 555-35-35</div>
-    </div>
-    <div class="footer__section">
-      <h4 class="footer__title">Навигация</h4>
-      <ul class="footer__list">
-        <li><a href="/index.html" class="footer__link">Главная страница</a></li>
-        <li><a href="/pages/profile.html" class="footer__link">Страница кабинета</a></li>
-        <li><a href="/pages/login.html" class="footer__link">Вход</a></li>
-        <li><a href="/pages/register.html" class="footer__link">Регистрация</a></li>
-      </ul>
-    </div>
-    <div class="footer__section">
-      <h4 class="footer__title">Бронирование</h4>
-      <ul class="footer__list">
-        <li><a href="/pages/booking.html" class="footer__link">Забронировать</a></li>
-        <li><a href="/pages/branches.html" class="footer__link">Филиалы</a></li>
-        <li><a href="/pages/car-select.html" class="footer__link">Выбор автомобиля</a></li>
-        <li><a href="/pages/history.html" class="footer__link">История бронирований</a></li>
-      </ul>
-    </div>
-    <div class="footer__section">
-      <h4 class="footer__title">Финансы</h4>
-      <ul class="footer__list">
-        <li><a href="/pages/cards.html" class="footer__link">Банковские карты</a></li>
-      </ul>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6">
+        <h4 class="mb-3 fw-bold">Индекс Драйв</h4>
+        <p class="text-white-50">8 (800) 555-35-35</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-title">Навигация</h5>
+        <ul>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="../pages/profile.html">Кабинет</a></li>
+          <li><a href="../pages/login.html">Вход</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-title">Бронирование</h5>
+        <ul>
+          <li><a href="../pages/booking.html">Забронировать</a></li>
+          <li><a href="../pages/branches.html">Филиалы</a></li>
+          <li><a href="../pages/history.html">История</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h5 class="footer-title">Финансы</h5>
+        <ul>
+          <li><a href="../pages/cards.html">Карты</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>
-<script src="../js/app.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
